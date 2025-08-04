@@ -18,7 +18,10 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	if (current == NULL)
 		return (NULL);
 	
+	/*assign values to node*/
 	current->n = value;
+	current->left = NULL;
+	current->right = NULL;
 	
 	/*if current list is empty*/
 	if (parent == NULL)
@@ -28,9 +31,7 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	}
 	else
 		current->parent = parent;
-	
-	current->left = NULL;
-	current->right = NULL;
+
 	
 	return (current);
 }
