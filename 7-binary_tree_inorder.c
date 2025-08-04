@@ -13,7 +13,7 @@ void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 {
 	if (tree == NULL || func == NULL)
 		return;
-	
+
 	binary_tree_inorder(tree->left, func); /*recur on left node*/
 	func(tree->n); /*Deal with the current node*/
 	binary_tree_inorder(tree->right, func); /*recur on the right node*/
