@@ -11,17 +11,17 @@
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-	binary_tree_t *current;
+	binary_tree_t *temp;
 
 	/*allocate memory for the node and check for failure*/
-	current = malloc(sizeof(binary_tree_t));
+	temp = malloc(sizeof(binary_tree_t));
 
-	if (current == NULL)
+	if (temp == NULL)
 		return (NULL);
 
-	current->n = value;
-	current->parent = parent;
-	current->left = NULL;
-	current->right = NULL;
-	return (current);
+	temp->n = value;
+	temp->parent = parent;
+	temp->left = NULL;
+	temp->right = NULL;
+	return (temp);
 }
